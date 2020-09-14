@@ -242,12 +242,12 @@ span.counter {
 .hide1{
     display: none;
 }
-#contact{
-    background-color: #035755;
+footer{
+    background-color: var(--title-color);
     margin: 0;
     padding: 25px 0 25px 0;
 }
-#contact p{
+footer p{
     color: white;
     margin:0;
     text-align: center;
@@ -261,7 +261,12 @@ span.counter {
   .tw:hover{
     color: #00acee;
   }
-  
+  .insta:hover{
+    background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .cont{
       display: flex;
       justify-content: center;
