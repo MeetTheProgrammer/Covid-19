@@ -242,12 +242,12 @@ span.counter {
 .hide1{
     display: none;
 }
-footer{
+#contact{
     background-color: #035755;
     margin: 0;
     padding: 25px 0 25px 0;
 }
-footer p{
+#contact p{
     color: white;
     margin:0;
     text-align: center;
