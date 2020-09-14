@@ -243,7 +243,7 @@ span.counter {
     display: none;
 }
 footer{
-    background-color: var(--title-color);
+    background-color: #035755;
     margin: 0;
     padding: 25px 0 25px 0;
 }
