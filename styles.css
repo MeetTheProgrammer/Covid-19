@@ -219,6 +219,15 @@ span.counter {
     height: 280px;
     width: 270px;
 }
+@keyframes example{
+    from{ color:white;}
+    to { color: grey;}
+}
+.hover3:hover{
+    animation-name: example;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 
 .sd{
     height: 310px;
@@ -271,6 +280,54 @@ footer p{
       display: flex;
       justify-content: center;
   }
+  .up{
+      color:white;
+      padding-right: 50px;
+  }
+  .up:hover{
+      color: 
+  }
+ .h{
+    color: black;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--primary-color) 50%,
+          black 50%);
+          background-size: 200% 100%;
+          background-position: 100%;
+  }
+  .h:hover {
+    transition: all 0.5s cubic-bezier(0.000, 0.000, 0.330, 1);
+    background-position: 0%;
+  }
+  .txt-type > .txt {
+    border-right: 0.2rem solid #3c8887;
+  }
+  .symptom2{
+      font-size: 1.2rem;
+      width: 300px;
+      background-image: url("img/fight.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-left: 0;
+      margin-left: -20px;
+  }
+  .symptom2 li{
+      padding-bottom: 3px;
+      color: #033837;
+      font-weight: bolder;
+      margin-left: 10px;
+      background: white;
+      opacity: 0.65;
+      text-shadow: #1fb6b3 0.02cm 0.02cm;
+  }
+  .symptom2 ol{
+      margin-bottom: 5px;
+  }
 @media screen and (max-width: 1200px) {
     .mainmenu ul li {
         padding: 10px 0;
@@ -312,7 +369,7 @@ footer p{
         text-align: center;
         text-shadow: white 0.05cm 0.05cm;
     }
-    .banner-content span{
+    #special1{
         color: #FF3E41;
         font-size: 1.8rem;
         background: white;
@@ -359,17 +416,14 @@ footer p{
     .removal p{
         display: none;
     }
-    .symptom img{
-        display: none;
-    }
-    .banner-content span{
+    #special1{
         color: #FF3E41;
         font-size: 1.8rem;
         background: white;
         opacity: 0.7;
     }
     .symptom2{
-        display: grid;
+        display: none;
     }
     .wswd p{
         display: none;
@@ -407,6 +461,9 @@ footer p{
     }
     .cover1 img{
         width: 90%;
+    }
+    .socdist{
+        width:100%;
     }
 }
 
@@ -453,7 +510,7 @@ footer p{
     .symptom img{
         display: none;
     }
-    .banner-content span{
+    #special1{
         color: #FF3E41;
         font-size: 1.8rem;
         background: white;
