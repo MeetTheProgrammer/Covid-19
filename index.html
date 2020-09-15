@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 
 <head>
     <title>Covid-19 | Protect Yourself Now</title>
@@ -26,10 +26,10 @@
                     <div class="mainmenu">
                         <ul>
                             <li><a class="active" href="#overview">Overview</a></li>
-                            <li><a class="" href="#contagion">Contagion</a></li>
-                            <li><a class="" href="#symptoms">Symptoms</a></li>
-                            <li><a class="" href="#prevention">Prevention</a></li>
-                            <li><a class="" href="#contact" class="butmenu">Contact</a></li>
+                            <li><a class="h" href="#contagion">Contagion</a></li>
+                            <li><a class="h" href="#symptoms">Symptoms</a></li>
+                            <li><a class="h" href="#prevention">Prevention</a></li>
+                            <li><a class="h" href="#contact" class="butmenu">Contact</a></li>
                         </ul>
                     </div>
                     <div class="mobilemenu">
@@ -50,14 +50,14 @@
             </div>
         </div>
     </header>
-    <section class="banner">
+    <section class="banner" id="up">
         <div class="container">
             <div class="banner-description">
                 <div class="banner-content">
-                    <span class="semi-title edit">COVID-19 Alert</span>
+                    <span class="semi-title edit" id="special1">COVID-19 Alert</span>
                     <h2 class="br">
                         Stay @ Home <br class="br">
-                        Break The Chain
+                        <span class="txt-type br" data-wait="3000"data-words='["Break The Chain","Stop Covid-19", "Fight Coronavirus", "Stay Safe"]'></span>
                     </h2>
                 </div>
             </div>
@@ -73,12 +73,12 @@
                 </div> <br><br>
                 <div class="col xl6 l6 m6 s12">
                     <div class="fdescription">
-                        <div class="desc-content">
+                        <div class="desc-content" >
                             <span class="semi-title">
                                 What is COVID-19?
                             </span>
                             <h2 class="subheading">
-                                Coronavirus
+                               Coronavirus
                             </h2>
                             <p>
                                 Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
@@ -149,9 +149,16 @@
                         <img class="symptoms" src="img/symptoms.jpg">
                     </div>
                     <div class="symptom2">
-                        <img src="img/symp1.jpg" alt="">
-                        <img src="img/symp2.jpg" alt="">
-                        <img src="img/symp3.jpg" alt="">
+                        <ol class="2s">
+                            <li>Fever</li>
+                            <li>Dry Cough</li>
+                            <li>Tiredness</li>
+                            <li>Shortness of Breath</li>
+                            <li>Chest Pain</li>
+                            <li>Sore Throat</li>
+                            <li>Runny Nose</li>
+                            <li>Headache</li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -226,7 +233,7 @@
                 	</div>
                 </div>
                 <div class="col xl6 l6 m6 s12 sd1">
-                	<div class="pre-img">
+                	<div class="pre-img socdist">
                 		<img class="fr sd" src="img/sd.jpg">
                 	</div>
                 </div>
@@ -281,9 +288,12 @@
     </section>
     <footer id="contact">
         <div>
-            <p>
-                © 2020 Meet Kakhani
-            </p>
+            <div>
+                <p>
+                    © 2020 Meet Kakhani 
+                </p>
+                <a href="#up" class="fr hoveffect"><i class="up hover3 fas fa-arrow-circle-up fa-3x"></i></a>
+            </div>
             <div class="cont">
                 <a href="https://twitter.com/__Meet_K" target="blank"><i class="fab fa-twitter fa-2x tw"></i></a>
                 <a href="https://www.instagram.com/__meetk_/" target="blank"><i class="fab fa-instagram fa-2x insta instagram" aria-hidden: "true"></i></a>
@@ -303,4 +313,72 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+class TypeWriter {
+  constructor(txtElement, words, wait = 3000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = '';
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 10);
+    this.type();
+    this.isDeleting = false;
+  }
+
+  type() {
+    // Current index of word
+    const current = this.wordIndex % this.words.length;
+    // Get full text of current word
+    const fullTxt = this.words[current];
+
+    // Check if deleting
+    if(this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    // Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+    // Initial Type Speed
+    let typeSpeed = 200;
+
+    if(this.isDeleting) {
+      typeSpeed /= 2;
+    }
+
+    // If word is complete
+    if(!this.isDeleting && this.txt === fullTxt) {
+      // Make pause at end
+      typeSpeed = this.wait;
+      // Set delete to true
+      this.isDeleting = true;
+    } else if(this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      // Move to next word
+      this.wordIndex++;
+      // Pause before start typing
+      typeSpeed = 500;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+
+
+// Init On DOM Load
+document.addEventListener('DOMContentLoaded', init);
+
+// Init App
+function init() {
+  const txtElement = document.querySelector('.txt-type');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
+  // Init TypeWriter
+  new TypeWriter(txtElement, words, wait);
+}
+
+
 </script>
