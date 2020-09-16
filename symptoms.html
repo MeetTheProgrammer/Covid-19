@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 | Symptoms</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="img/c19.png" sizes="25x25" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="col xl2 l2 m6 s5">
+                    <div class="logo">
+                        <a href="#!"><img src="img/logo.png"></a>
+                    </div>
+                </div>
+                <div class="col xl10 l10 m6 s7">
+                    <div class="mainmenu">
+                        <ul>
+                            <li><a class="h" href="index.html">Overview</a></li>
+                            <li><a class="h" href="contagion.html">Contagion</a></li>
+                            <li><a class="active" href="#">Symptoms</a></li>
+                            <li><a class="h" href="prevention.html">Prevention</a></li>
+                            <li><a class="h" href="#contact" class="butmenu">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobilemenu">
+                        <span onclick="openNav()">&#9776;</span>
+                        <div id="mySidenav" class="sidemenu">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <ul>
+                                <li><a class="n" href="index.html">Overview</a></li>
+                                <li><a class="n" href="contagion.html">Contagion</a></li>
+                                <li><a class="n" href="#">Symptoms</a></li>
+                                <li><a class="n" href="prevention.html">Prevention</a></li>
+                                
+                            </ul>
+                            <img src="img/desc.png" class="hc19">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner" id="up">
+        <div class="container">
+            <div class="banner-description">
+                <div class="banner-content">
+                    <span class="semi-title edit" id="special1">COVID-19 Alert</span>
+                    <h2 class="br">
+                        Stay @ Home <br class="br">
+                        <span class="txt-type br" data-wait="3000"data-words='["Break The Chain","Stop Covid-19", "Fight Coronavirus", "Stay Safe"]'></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="symptoms" id="symptoms">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="ftitle removal">
+                        <span class="semi-title">COVID-19</span>
+                        <h2 class="subheading">Symptoms</h2>
+                        <p>
+                            COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.
+                        </p>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="sym-img symptom">
+                        <img class="symptoms" src="img/symptoms.jpg">
+                    </div>
+                    <div class="symptom2">
+                        <ol class="2s">
+                            <li>Fever</li>
+                            <li>Dry Cough</li>
+                            <li>Tiredness</li>
+                            <li>Shortness of Breath</li>
+                            <li>Chest Pain</li>
+                            <li>Sore Throat</li>
+                            <li>Runny Nose</li>
+                            <li>Headache</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="col xl6 l6 m6 s12">
+            <div class="para">
+            
+            <p class="p1ara">Seek immediate medical attention if you have serious symptoms. Always call before visiting your doctor or health facility. 
+
+                People with mild symptoms who are otherwise healthy should manage their symptoms at home. 
+                
+                On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.</p>
+        </div>
+    </section>
+    <footer id="contact">
+        <div>
+            <div>
+                <p>
+                    © 2020 Meet Kakhani 
+                </p>
+                <a href="#up" class="fr hoveffect"><i class="up hover3 fas fa-arrow-circle-up fa-3x"></i></a>
+            </div>
+            <div class="cont">
+                <a href="https://twitter.com/__Meet_K" target="blank"><i class="fab fa-twitter fa-2x tw"></i></a>
+                <a href="https://www.instagram.com/__meetk_/" target="blank"><i class="fab fa-instagram fa-2x insta instagram" aria-hidden: "true"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+class TypeWriter {
+  constructor(txtElement, words, wait = 3000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = '';
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 10);
+    this.type();
+    this.isDeleting = false;
+  }
+
+  type() {
+    // Current index of word
+    const current = this.wordIndex % this.words.length;
+    // Get full text of current word
+    const fullTxt = this.words[current];
+
+    // Check if deleting
+    if(this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    // Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+    // Initial Type Speed
+    let typeSpeed = 200;
+
+    if(this.isDeleting) {
+      typeSpeed /= 2;
+    }
+
+    // If word is complete
+    if(!this.isDeleting && this.txt === fullTxt) {
+      // Make pause at end
+      typeSpeed = this.wait;
+      // Set delete to true
+      this.isDeleting = true;
+    } else if(this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      // Move to next word
+      this.wordIndex++;
+      // Pause before start typing
+      typeSpeed = 500;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+
+
+// Init On DOM Load
+document.addEventListener('DOMContentLoaded', init);
+
+// Init App
+function init() {
+  const txtElement = document.querySelector('.txt-type');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
+  // Init TypeWriter
+  new TypeWriter(txtElement, words, wait);
+}
+</script>
