@@ -262,6 +262,12 @@ footer p{
     text-align: center;
     padding-top: 10px;
 }
+.para{
+    margin: 50px;
+}
+.p1ara{
+    color: var(--primary-color);
+}
 .tw,.insta{
     padding: 8px;
     color: white;
