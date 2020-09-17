@@ -78,6 +78,30 @@ section.banner {
     background-size: 50%;
     background-position: right;
 }
+section.banner1 {
+    height: 90vh;
+    background-image: url(img/fight.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+}
+section.banner2 {
+    height: 90vh;
+    background-image: url(img/killing.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+}
+section.banner3 {
+    height: 90vh;
+    background-image: url(img/doctors\ protect.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+}
 
 .semi-title {
     font-weight: 700;
@@ -371,6 +395,21 @@ footer p{
         background-size: cover;
         background-attachment: scroll;
     }
+    section.banner1 {
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+    section.banner2 {
+        background-position: top;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+    section.banner3 {
+        background-position: top;
+        background-size: cover;
+        background-attachment: scroll;
+    }
     .banner-content h2{
         text-align: center;
         text-shadow: white 0.05cm 0.05cm;
@@ -384,6 +423,21 @@ footer p{
 }
 @media screen and (max-width: 595px) {
     section.banner {
+        background-position: top;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+    section.banner1 {
+        background-position: top;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+    section.banner2 {
+        background-position: top;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+    section.banner3 {
         background-position: top;
         background-size: cover;
         background-attachment: scroll;
